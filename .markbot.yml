@@ -1,19 +1,9 @@
 repo: pokedex
-canvasCourse: web-dev-1
 
 naming: true
-#liveWebsite: true
 restrictFileTypes: true
-#bestPractices: true
+bestPractices: true
 
-# Other tests, described below, would go here
-git:
-
-  # Force the students to make sure all their files are committed.
-  #allCommitted: true
-  # Force the students to make sure all their files are pushed & synced.
-  #allSynced: true
-  
 allFiles:
 
   html:
@@ -31,3 +21,15 @@ html:
     has:
       - ['h1', 'Must have a h1 element!']
       - ['h2', 'Must have an h2 element']
+      - ['p', 'Must have a paragraph element!']
+      - ['table', 'Must be using a table to display the Pokemon']
+    search:
+      - ['Bulbasaur', 'You got to include my favorite pokemon!']
+      
+  - path: 'addpokemon.html'
+    has:
+      - ['form', 'Need to be using a form to add a new pokemon']
+      - ['select[name="name"]', 'A select element must be present']
+      - ['input[type="text"]', 'Need to keep track of a nickname with a text input!']
+      - ['input[type="radio"][name="gender"]', 'Need to keep track of gender with a radio element']
+      - ['input[type="submit"][value="Add Pokemon"]', 'Must be able to add a new pokemon to your collection with a submit button!']
